@@ -6,6 +6,23 @@
 
 -----
 
+## 有条件的（拥有Linux系统的）
+
+看如下命令，可以不用github Action
+```
+sudo apt update
+sudo apt -y install python python3 python-pip python3-pip cpio
+
+pip3 install twrpdtgen   //安装twrpdtgen
+mkdir dt                 //创建dt文件夹
+
+//复制boot.img到当前目录下后，执行
+python3 -m twrpdtgen -o dt/ *.img
+
+```
+
+继续
+
 - 2.将这个仓库fork到你的用户名下
 
 -----
